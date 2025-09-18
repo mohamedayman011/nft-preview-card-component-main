@@ -1,0 +1,148 @@
+:root {
+    --blue-500: hsl(215, 51%, 70%);
+    --cyan-400: hsl(178, 100%, 50%);
+    --blue-950: hsl(217, 54%, 11%);
+    --blue-900: hsl(216, 50%, 16%);
+    --blue-800: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+body {
+    background-color: var(--blue-950);
+    color: var(--white);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    letter-spacing: 0.4px;
+    padding: 32px 24px;
+}
+a {
+    text-decoration: none;
+}
+.card {
+    background-color: var(--blue-900);
+    border-radius: 12px;
+    max-width: 350px;
+    width: 100%;
+    padding: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+.image {
+    position: relative;
+    margin-bottom: 16px;
+}
+.image img{
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.image::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./images/icon-view.svg) no-repeat center;
+    background-color: rgba(0, 255, 247, 0.5);
+    opacity: 0;
+    z-index: 2;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.image.image:hover::before{
+    opacity: 1;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 16px 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+h1:hover {
+    color: var(--cyan-400);
+}
+
+p {
+    color: var(--blue-500);
+    font-size: 18px;
+    font-weight: 400;
+}
+.card > p {
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--blue-800);
+    margin-bottom: 24px;
+}
+.info > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+.info .price {
+    color: var(--cyan-400);
+    font-weight: 600;
+}
+
+.info .time {
+    color: var(--blue-500);
+    font-weight: 400;
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.avatar {
+    display: block;
+    width: 32px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+.creator p {
+    font-size: 14px;
+    color: var(--blue-500);
+}
+
+.creator p a {
+    color: var(--white);
+    transition: 0.3s;
+}
+
+.creator p a:hover {
+    color: var(--cyan-400);
+}
+
+
+@media (max-width: 375px) {
+    body{
+        padding: 30px 12px;
+    }
+    .card {
+        padding: 16px;
+    }
+
+}
