@@ -11,7 +11,7 @@
 
 ### Links
 
-- Live Site URL: [nft-preview-card-component](https://mohamedayman011.github.io/nft-preview-card-component)
+- Live Site URL: [nft-preview-card-component](https://mohamedayman011.github.io/nft-preview-card-component-main)
 
 ## Author
 
